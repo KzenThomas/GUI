@@ -1,0 +1,39 @@
+package school;
+
+import javax.swing.*;
+
+public class Frame {
+
+	JFrame f;
+
+	Frame() {
+		int counter = 0;
+
+		f = new JFrame();
+
+		JPanel newPanel = new JPanel();
+		f.add(newPanel);
+
+		JButton b = new JButton("Toenemen");
+		b.setBounds(130, 100, 100, 40);
+		newPanel.add(b);
+		
+		JButton c = new JButton("verminderen");
+		c.setBounds(10, 100, 100, 40);
+		newPanel.add(c);
+		
+		JLabel label = new JLabel(counter);
+		newPanel.add(label);
+		
+		f.add(b);
+		f.add(c);
+
+		f.setSize(400, 500);
+		f.setLayout(null);
+		f.setVisible(true);
+	}
+
+	public static void main(String[] args) {
+		new Frame();
+	}
+}
